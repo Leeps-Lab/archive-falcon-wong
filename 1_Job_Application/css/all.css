@@ -1,0 +1,87 @@
+html {
+	background:#000000;
+}
+
+h1, h2{
+	color: #FFFFFF;
+}
+body {
+	font-family: Verdana;
+	font-size: 20;
+	text-align:center;
+	text-shadow:0px 0px #555555;
+}
+
+.user_table {
+	width:800px; 
+    margin-left:20%; 
+    margin-right:20%;
+	border-collapse:collapse;
+	background:#555555;
+	text-shadow:2px 2px #555555;
+	border-radius: 10px;
+}
+
+.table_entry {
+	color:#FFFFFF;
+	border: 1px dashed #C4E3F3;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.table_entry:hover {
+	background:#6993DA;
+}
+
+input[type='button'] {
+	margin:auto;
+	width:120px;
+	font-size: 12px;
+	color:#FFFFFF;
+	padding: 10px;
+	border: 2px solid #56878F;
+	border-radius: 8px;
+	background:#555555;
+}
+
+input[type='button']:hover {
+	border: 2px solid #CCCCCC;
+	background: #6993DA;
+}
+
+input[type='button']:active {
+	border: 2px solid #CCCCCC;
+	background: #3660A7;
+}
+
+.chart {
+    margin-left:25%; 
+    margin-right:25%;
+}
+
+.simulation {
+	margin-bottom:15px;
+}
+
+input[type="text"] {
+	vertical-align:top;
+	width:400px;
+	height:15px;
+	font-size:18px;
+	color:#FFFFFF;
+	text-align:left;
+	padding: 10px;
+	border-radius: 8px;
+	border: 2px solid #AAAAAA;
+}
+
+input[type="text"]:hover {
+	background: #BBBBBB;
+	color: #222222;
+}
+
+input[type="text"]:focus {
+	background: #FFFFFF;
+	border: 2px solid #777777;
+	color: #000000;
+}

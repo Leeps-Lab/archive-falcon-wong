@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LEEPS Assignment</title>
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <script src="js/lib/flot-flot-958e5fd/jquery.js"></script>
+        <script src="js/lib/flot-flot-958e5fd/jquery.flot.js"></script>
+        <script src="js/src/stoc.js"> </script>
+    </head>
+    <body>
+        <h1>Welcome to my Stochastic / <a href="index.html">Particle</a> App!</h1>
+        
+		<table class="user_table">
+			<tr>
+				<td class="table_entry" id="user_in_val">User Input: </td>
+				<td class="table_entry">
+					Select an input value: <br>
+    				0 <input id="user_in" type="range" min="0" max="1" step="0.01"> 1
+				</td>
+				<td class="table_entry" id="random_value" style="padding: 10px">Stochastic Value: </td>
+				<td class="table_entry" id="profit" style="padding: 10px">Profit Rate: </td>
+			</tr>
+		</table>
+		<table class="user_table">
+			<tr>
+				<td class="table_entry" id="equation" style="padding: 10px">PROFIT = 1 - Math.pow(user - stoc, 2)</td>
+				<td class="table_entry" id="total_profit" style="padding: 10px">Total Profit: </td>
+			</tr>
+        </table>
+        <br />
+		<form>
+			<input class="text_field" id="equation_input" type="text" placeholder="i.e. user + stoc"/>
+			<input class="buttons" id="change_eq" type="button" onclick="process.change_equation()" value="Change Equation"/>
+		</form>
+
+		<div class="chart" id="profit_chart" style="width:50%; height: 350px"> </div>
+		<form>
+			<input class="buttons" id="set" type="button" onclick="process.start_process()" value="Start"/>
+			<input class="buttons" id="pause" type="button" onclick="process.pause_process()" value="Pause"/>
+			<input class="buttons" id="reset" type="button" onclick="process.reset_process()" value="Reset"/>
+		</form>
+		<form>
+			<input class="buttons" id="toggle" type="button" onclick="process.toggle_random_value_visibility()" value="Stochastic"/>
+			<input class="buttons" id="curr" type="button" onclick="process.toggle_chart(true)" value="Current Profit"/>
+			<input class="buttons" id="total" type="button" onclick="process.toggle_chart(false)" value="Total Profit"/>
+		</form>
+    </body>
+</html>

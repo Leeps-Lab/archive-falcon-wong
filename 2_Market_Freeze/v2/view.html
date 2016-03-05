@@ -1,0 +1,76 @@
+{% load verbatim %}
+<!DOCTYPE HTML>
+<html ng-app="Redwood">
+	<head>
+		<title>Start</title>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/lib/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/lib/bootstrap/bootstrap-3.1.1.min.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/lib/angular/angular-1.2.16.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/redwoodCore.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/redwoodHelpers.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/redwoodSubject.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/asyncCallManagerService.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/synchronizedStopWatch.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/redwoodSubject.js"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}framework/js/lib/flot/jquery.flot.js"></script>
+		<link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}framework/css/bootstrap-3.1.1.min.css"></link>
+		<script type="text/javascript">
+			{{ js }}
+		</script>
+		<style type="text/css">
+			{{ css }}
+		</style>
+	</head>
+{% verbatim %}
+	<body ng-controller="SubjectCtrl">
+		
+		<div class="navbar navbar-fixed-top container">
+			<div class="navbar navbar-default" style="margin-bottom: 0;">
+				<div class="navbar-brand" href="#">Economics Experiment</div>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a>User ID: <span>{{$root.user_id}}</span></a>
+					</li>
+				</ul>
+				<div class="navbar-right">
+					<div class="navbar-text">Period: <span>{{$root.period}}</span></div>
+					<div class="navbar-text">Round: <span>{{round}} / {{rounds}}</span></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container" style="margin-top: 45px;">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="box probability">Probability of Forced Sale: <span style="float:right;">{{probability}}%</span></div>
+				</div>
+				<div class="col-lg-6">
+					<div class="box probability">Probability of Payout: <span style="float:right;">{{100 - probability}}%</span></div>
+				</div>
+				<div class="col-lg-12">
+					<div class="box signal">Signal: <span style="float:right;">{{signal}}</span></div>
+				</div>
+				<div class="col-lg-4">
+					<div class="box">Your Status:<span style="float:right;" id="yourStatus">not sold</span></div>
+				</div>
+				<div class="col-lg-4">
+					<div class="box">Your PayOff:<span style="float:right;" id="yourPayoff">0</span></div>
+				</div>
+				<div class="col-lg-4">
+					<div class="box">Market Status:<span style="float:right;" id="marketStatus">freed</span></div>
+				</div>
+				<div class="col-lg-12">
+					<div class="box" id="msg">Message: You can sell your market share or wait for the payout at the end</div>
+				</div>
+				<div class="col-lg-12" style="margin: 10px;">
+					<div id="marketPlot" style="width:1000px; height:400px; margin: auto;"></div>
+				</div>
+				<div class="col-lg-12">
+					<input id="sell" class="button" type="button" value="Sell" ng-click="sell()">
+				</div>
+			</div>
+		</div>
+	</body>
+{% endverbatim %}
+</html>
+

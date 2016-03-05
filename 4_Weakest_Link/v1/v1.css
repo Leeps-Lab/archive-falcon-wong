@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+}
+label {
+	border: 2px solid #ABCDEF;
+	border-radius: 5px;
+	width: 100px;
+	margin: auto;
+}
+table {
+	margin: auto;
+	margin-top: 10px;
+}
+input[type='range']:hover {
+	cursor: pointer;
+}
+.plot {
+	width: 400px;
+	height: 500px;
+	margin: 20px;
+	display: inline-block;
+}
+.controls {
+	padding: 10px;
+	border: 2px solid #ABCDEF;
+	border-radius: 10px;
+	background: #333333;
+	color: #FFFFFF;
+}

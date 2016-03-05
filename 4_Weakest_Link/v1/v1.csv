@@ -1,0 +1,4 @@
+period,group,groupSize,master,roundDurationInTicks,tickSpeedInMs,enableRealtimeControl,showYourPayoff,showAveragePayoff,showTopPayoff,subjectPositions,alpha,beta,alphaAutomation,betaAutomation
+1,1,4,0,300,100,TRUE,TRUE,TRUE,TRUE,"[4,3,7]",-0.1,0.05,"[['hold', 0, -1],['linear', 50, 0],['hold', 80, -1]]","[['hold', 0, 2]]"
+2,1,4,0,300,100,TRUE,TRUE,TRUE,TRUE,"[4,3,7,2]",-1,1,,
+3,1,4,0,300,100,TRUE,TRUE,TRUE,TRUE,"[4,3,7,2]",-1,1,,
